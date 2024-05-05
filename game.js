@@ -45,6 +45,12 @@ $(document).keypress("a", function() {
     }
 });
 
+$(document).click(function() {
+    if (level === 0) {
+        nextSequence();
+    }
+});
+
 function checkAnswer(currentLevel) {
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
         console.log("success");
