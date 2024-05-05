@@ -39,10 +39,11 @@ function animatePress(currentColour) {
     }, 100);
 }
 
-$(document).on("click keypress", function() {
-    if (level === 0) {
+$(document).on("click keypress", function(event) {
+    if (event.type === "click" || event.type === "keypress"){if (level === 0) {
         nextSequence();
-    }
+    }}
+    
 });
 
 function checkAnswer(currentLevel) {
