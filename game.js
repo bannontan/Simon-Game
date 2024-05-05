@@ -39,13 +39,7 @@ function animatePress(currentColour) {
     }, 100);
 }
 
-$(document).keypress("a", function() {
-    if (level === 0) {
-        nextSequence();
-    }
-});
-
-$(document).click(function() {
+$(document).on("click keypress", function() {
     if (level === 0) {
         nextSequence();
     }
